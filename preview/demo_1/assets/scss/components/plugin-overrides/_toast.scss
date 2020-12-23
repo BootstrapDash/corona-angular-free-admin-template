@@ -1,0 +1,60 @@
+/* Toast */
+
+.toast-container {
+  .toast-success,
+  .toast-info,
+  .toast-warning,
+  .toast-error {
+      background-image: none;
+      color: $white;
+      font-weight: 300;
+      font-size: $default-font-size;
+      border: none;
+      &::before {
+          font-family: 'Material Design Icons';
+          position: absolute;
+          top: 40%;
+          left: 5%;
+          color: $white;
+          font-size: 1.25rem;
+      }
+      .toast-title {
+          margin-bottom: 10px;
+      }
+      .toast-message {
+          line-height: 1.3;
+      }
+  }
+  .toast-success {
+      background-color: theme-color(success);
+      &::before {
+          content: "\FE6E";
+      }
+  }
+  .toast-info {
+      background-color: theme-color(info);
+      &::before {
+          content: "\FB56";
+      }
+  }
+  .toast-warning {
+      background-color: theme-color(warning);
+      &::before {
+          content: "\F02A";
+      }
+  }
+  .toast-error {
+      background-color: theme-color(danger);
+      &::before {
+          content: "\FEEA";
+      }
+  }
+  &.toast-bottom-full-width,
+  &.toast-top-full-width {
+      .ngx-toastr {
+          &::before {
+              left: 1%;
+          }
+      }
+  }
+}

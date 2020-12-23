@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Documentation</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.45.0/codemirror.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.45.0/theme/dracula.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid documentation">
+      <div class="row">
+        <div class="col-md-3 col-xl-2 left-sidebar">
+          <div class="logo-wrapper">
+              <img src="../template/demo_1/src/assets/images/logo.svg" alt="logo">
+          </div>
+          <h5 class="left-menu-title">Documentation</h5>
+          <ul class="left-menu">
+              <li><a href="#introduction"> Introduction </a></li>
+              <li><a href="#fileStructure"> File Structure </a></li>
+          </ul>
+          <h6 class="left-menu-title">Installation</h6>
+          <ul class="left-menu">
+              <li><a href="#setupEnvironment"> Setup Environment </a></li>
+              <li><a href="#templateInstallation"> Template Installation </a></li>
+          </ul>
+          <h6 class="left-menu-title">Deployment</h6>
+          <ul class="left-menu">
+              <li><a href="#deployment"> Deploy Angular App </a></li>
+          </ul>
+          <h6 class="left-menu-title">Basic Structure</h6>
+          <ul class="left-menu">
+              <li><a href="#appComponent"> App Component </a></li>
+              <li><a href="#navbar"> Navbar </a></li>
+              <li><a href="#settingsPanel"> Setting panel </a></li>
+              <li><a href="#leftSidebar"> Left sidebar </a></li>
+              <li><a href="#footer"> Footer </a></li>
+          </ul>
+          <h6 class="left-menu-title">Other Information</h6>
+          <ul class="left-menu">
+              <li><a href="#customerSupport"> Customer Support </a></li>
+          </ul>
+        </div>
+        <div class="col-md-9 col-xl-10 main-panel">
+          <div class="main-panel-wrapper">
+              <h2 class="mt-2 text-center font-weight-light text-muted text-uppercase mb-4">Documentation</h2>
+              <div class="card grid-margin">
+                <div class="card-body">
+                  <h3 id="introduction" class="mb-4">Introduction</h3>
+                  <p>Corona Angular Admin is a responsive Angular 11 template that is based on the CSS framework Bootstrap 4 and it is built with Sass. Sass compiler makes it easier to code and customize. If you are unfamiliar with Bootstrap or Sass, visit their
+                      website and read through the documentation. All of Bootstrap components have been modified to fit the style of Corona Angular Admin and provide a consistent look throughout the template.</p>
+                  <p>Before you start working with the template, we suggest you go through the pages that are bundled with the theme. Most of the template example pages contain quick tips on how to create or use a component which can
+                      be really helpful when you need to create something on the fly.</p>
+                  </div>
+              </div>
+              <div class="card grid-margin">
+                <div class="card-body">
+                  <h3 id="fileStructure" class="mb-4">File Structure</h3>
+                  <p>Once you have download the package you will see the following folder structure inside the folder.</p>
+                  <textarea rows="4" cols="50" class="code-non-editable">
+Corona/
+├── Angular
+    ├── template
+      ├── demo variation folders (for eg, demo_1)
+          ├── e2e/
+          ├── src/
+              ├── app/
+              ├── assets/
+              ├── environments/
+              ├── browserlist
+              ├── favicon.ico
+              ├── index.html
+              ├── karma.conf.js
+              ├── main.ts
+              ├── polyfills.ts
+              ├── styles.scss
+              ├── test.ts
+              ├── tsconfig.app.json
+              ├── tsconfig.spec.json
+          ├── .editorconfig/
+          ├── .gitignore
+          ├── angular.json
+          ├── CHANGELOG.md
+          ├── package.json
+          ├── README.md
+          ├── .tsconfig.md
+          ├── .tslint.json
+    ├── preview (dist of 4 demos)
+    ├── CHANGELOG.md
+    ├── documentation
+
+                  </textarea>
+                </div>
+              </div>
+              <div class="card grid-margin">
+                <div class="card-body">
+                  <h3>Installation</h3>
+                  <h4 id="setupEnvironment" class="pt-4">Set up the Development Environment</h4>
+                  <p>Install <a href="https://nodejs.org/en/" target="_blank">Node.js and npm</a> if they are not already on your machine.</p>
+                  <p>Angular CLI is a command line interface for the latest Angular. Install it before start with the Angular app.</p>
+                  <textarea rows="4" cols="50" class="code-non-editable">npm install --global @angular/cli@latest</textarea>
+                  <div class="alert alert-warning">
+                      <p>If you have Angular CLI installed previously, update it to the latest Angular CLI. Remove the older version and re-install it.</p>
+                      <textarea rows="4" cols="50" class="code-non-editable">npm uninstall --global @angular/cli</textarea>
+                      <textarea rows="4" cols="50" class="code-non-editable">npm install --global @angular/cli@latest</textarea>   
+                  </div>
+                  <h4 id="templateInstallation" class="pt-4">Template Installation</h4>
+                  <p>Go to the project directory and install the Angular local project dependencies.</p>
+                  <p>Run <code>npm install</code>. This command install the dependencies in the local <code>node_modules</code> folder.
+                      By default, <code>npm install</code> will install all modules listed as dependencies in <code>package.json</code>.</p>
+                  <textarea rows="4" cols="50" class="code-non-editable">npm install</textarea>   
+                  <textarea rows="4" cols="50" class="code-non-editable">ng serve</textarea>                   
+                  <p>The <code>ng serve</code> command launches the server, watches your files, and rebuilds the app as you make changes to those files.
+                      Using the <code>--open</code> (or just <code>-o</code>) option will automatically open your browser on <a href="http://localhost:4200/" target="_blank">http://localhost:4200/</a>.</p>
+                  <p>For more detailed information to install the Angular application, visit this official Angular <a href="https://angular.io/guide/quickstart" target="_blank">documentation website</a>.</p>
+                </div>
+              </div>
+              <div class="card grid-margin">
+                <div class="card-body">
+                  <h3 id="deployment">Deployment</h3>
+                  <h4 class="pt-4">Deploy Angular app </h4>
+                  <p>For the simplest deployment, create a production build and copy the output directory to a web server.</p>
+                  <p>1. Start with the production build:</p>
+                  <textarea rows="4" cols="50" class="code-non-editable">ng build --prod</textarea>   
+                  <p>2. Copy everything within the output folder (dist/) to a folder on the server.</p>
+                  <p>3. Configure the server to redirect requests for missing files to index.html.</p>
+                  <p class="mt-4">If you copy the files into a server sub-folder, append the build flag, <code>--base-href</code> and set the <code>&lt;base href&gt;</code> appropriately.
+                      For example, if the <code>index.html</code> is on the server at <code>/my/app/index.html</code>, set the base href to <code>&lt;base href="/my/app/"&gt;</code> like this.</p>
+                      <p>If you're serving the app out of a subfolder, edit a version of index.html to set the base href appropriately.
+                      For example, if the URL to <code>index.html</code> is <code>www.mysite.com/my/app/index.html</code>, set the base href to:</p>
+                  <textarea rows="4" cols="50" class="code-non-editable"><base href="/my/app/"></textarea>                   
+                  <p>Learn more about the role of <code>&lt;base href&gt;</code> <a href="https://angular.io/guide/deployment#base-tag" target="_blank">below</a>.</p>
+                  <p>You also can set the base href right in the <code>ng build</code> command</p>
+                  <textarea rows="4" cols="50" class="code-non-editable">ng build --prod --base-href="/my/app/"</textarea>                
+                  <p>For more detailed information, visit this official Angular <a href="https://angular.io/guide/deployment" target="_blank">documentation website</a>.</p>
+                </div>
+              </div>
+              <div class="card grid-margin">
+                <div class="card-body">
+                  <h3>Basic Structure</h3>
+                  <h4 class="pt-4" id="appComponent">App Component</h4>
+                  <textarea rows="4" cols="50" class="code-non-editable">
+
+    <div class="container-scroller">
+      <app-navbar *ngIf="showNavbar"></app-navbar>
+      <div class="container-fluid page-body-wrapper">
+          <app-settings-panel *ngIf="showSettings"></app-settings-panel>
+          <app-sidebar *ngIf="showSidebar"></app-sidebar>
+          <div class="main-panel" [ngClass]="{ 'main-panel-only' : !showSidebar }">
+          <div class="content-wrapper">
+              <router-outlet></router-outlet>
+          </div>
+          <app-footer *ngIf="showFooter"></app-footer>
+          </div>
+      </div>
+    </div>
+                  </textarea>
+                  <h4 class="pt-4" id="navbar">Navbar</h4>
+                  <textarea rows="4" cols="50" class="code-non-editable">
+
+    <nav class="navbar default-layout-navbar p-0 fixed-top d-flex flex-row">
+      <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-stretch">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize" (click)="toggleSidebar()">
+          <span class="mdi mdi-menu"></span>
+        </button>
+        <ul class="navbar-nav w-100">
+          <li class="nav-item w-100">
+            <form class="nav-link mt-2 mt-md-0 d-none d-lg-flex search">
+              <input type="text" class="form-control" placeholder="Search products">
+            </form>
+          </li>
+        </ul>
+        <ul class="navbar-nav navbar-nav-right">
+          <li class="nav-item d-none d-lg-block" ngbDropdown>
+            <a class="nav-link btn btn-success create-new-button" id="createbuttonDropdown" ngbDropdownToggle>+ Create New Project</a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" ngbDropdownMenu aria-labelledby="createbuttonDropdown">
+              <h6 class="p-3 mb-0">Projects</h6>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-dark rounded-circle">
+                    <i class="mdi mdi-file-outline text-primary"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <p class="preview-subject ellipsis mb-1">Software Development</p>
+                </div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-dark rounded-circle">
+                    <i class="mdi mdi-web text-info"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <p class="preview-subject ellipsis mb-1">UI Development</p>
+                </div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-dark rounded-circle">
+                    <i class="mdi mdi-layers text-danger"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <p class="preview-subject ellipsis mb-1">Software Testing</p>
+                </div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <p class="p-3 mb-0 text-center">See all projects</p>
+            </div>
+          </li>
+          <li class="nav-item nav-settings d-none d-lg-block">
+            <a class="nav-link">
+              <i class="mdi mdi-view-grid"></i>
+            </a>
+          </li>
+          <li class="nav-item border-left" ngbDropdown>
+            <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" ngbDropdownToggle>
+              <i class="mdi mdi-email"></i>
+              <span class="count-symbol bg-success"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" ngbDropdownMenu aria-labelledby="messageDropdown">
+              <h6 class="p-3 mb-0">Messages</h6>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <img src="assets/images/faces/face4.jpg" alt="image" class="rounded-circle profile-pic">
+                </div>
+                <div class="preview-item-content">
+                  <p class="preview-subject ellipsis mb-1">Mark send you a message</p>
+                  <p class="text-muted mb-0"> 1 Minutes ago </p>
+                </div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <img src="assets/images/faces/face2.jpg" alt="image" class="rounded-circle profile-pic">
+                </div>
+                <div class="preview-item-content">
+                  <p class="preview-subject ellipsis mb-1">Cregh send you a message</p>
+                  <p class="text-muted mb-0"> 15 Minutes ago </p>
+                </div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <img src="assets/images/faces/face3.jpg" alt="image" class="rounded-circle profile-pic">
+                </div>
+                <div class="preview-item-content">
+                  <p class="preview-subject ellipsis mb-1">Profile picture updated</p>
+                  <p class="text-muted mb-0"> 18 Minutes ago </p>
+                </div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <p class="p-3 mb-0 text-center">4 new messages</p>
+            </div>
+          </li>
+          <li class="nav-item border-left" ngbDropdown>
+            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" ngbDropdownToggle>
+              <i class="mdi mdi-bell"></i>
+              <span class="count-symbol bg-danger"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" ngbDropdownMenu aria-labelledby="notificationDropdown">
+                <h6 class="p-3 mb-0">Notifications</h6>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-dark rounded-circle">
+                      <i class="mdi mdi-calendar text-success"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content">
+                    <p class="preview-subject mb-1">Event today</p>
+                    <p class="text-muted ellipsis mb-0"> Just a reminder that you have an event today </p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-dark rounded-circle">
+                      <i class="mdi mdi-settings text-danger"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content">
+                    <p class="preview-subject mb-1">Settings</p>
+                    <p class="text-muted ellipsis mb-0"> Update dashboard </p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-dark rounded-circle">
+                      <i class="mdi mdi-link-variant text-warning"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content">
+                    <p class="preview-subject mb-1">Launch Admin</p>
+                    <p class="text-muted ellipsis mb-0"> New admin wow! </p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <p class="p-3 mb-0 text-center">See all notifications</p>
+            </div>
+          </li>
+          <li class="nav-item" ngbDropdown>
+            <a class="nav-link" id="profileDropdown" ngbDropdownToggle>
+              <div class="navbar-profile">
+                <img class="img-xs rounded-circle" src="assets/images/faces/face15.jpg" alt="">
+                <p class="mb-0 d-none d-sm-block navbar-profile-name">Henry Klein</p>
+                <i class="mdi mdi-menu-down d-none d-sm-block"></i>
+              </div>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" ngbDropdownMenu aria-labelledby="profileDropdown">
+              <h6 class="p-3 mb-0">Profile</h6>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-dark rounded-circle">
+                    <i class="mdi mdi-settings text-success"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <p class="preview-subject mb-1">Settings</p>
+                </div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-dark rounded-circle">
+                    <i class="mdi mdi-logout text-danger"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <p class="preview-subject mb-1">Log out</p>
+                </div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <p class="p-3 mb-0 text-center">Advanced settings</p>
+            </div>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" (click)="toggleOffcanvas()">
+          <span class="mdi mdi-menu"></span>
+        </button>
+      </div>
+    </nav>
+                  </textarea>
+                  <h4 class="pt-4" id="settingsPanel">Settings Panel</h4>
+                  <textarea rows="4" cols="50" class="code-non-editable">
+<div id="settings-trigger" (click)="toggleThemeSettings()"><i class="mdi mdi-settings"></i></div>
+<div id="theme-settings" class="settings-panel">
+  <i class="settings-close mdi mdi-close" (click)="closeSettingsSidebar('theme')"></i>
+  <p class="settings-heading mt-2">LAYOUT OPTIONS</p>
+  <div class="layout-variations px-4 mx-2 mt-3">
+    <div class="form-check layout-item">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="layout-variations" [checked]="isDefaultLayout" (change)="changeLayout('default')">
+        Default
+        <i class="input-helper"></i>
+      </label>
+    </div>
+    <div class="form-check layout-item">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="layout-variations" [checked]="isBoxedLayout" (change)="changeLayout('boxed')">
+        Boxed Layout
+        <i class="input-helper"></i>
+      </label>
+    </div>
+    <div class="form-check layout-item">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="layout-variations" [checked]="isSidebarIconOnly" (change)="changeLayout('icon-menu')">
+        Icon Menu
+        <i class="input-helper"></i>
+      </label>
+    </div>
+    <div class="form-check layout-item">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="layout-variations" [checked]="isCompactMenu" (change)="changeLayout('compact-menu')">
+        Compact Menu
+        <i class="input-helper"></i>
+      </label>
+    </div>
+    <div class="form-check layout-item">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="layout-variations" [checked]="isFixedSidebar" (change)="changeLayout('fixed-sidebar')">
+        Fixed Sidebar
+        <i class="input-helper"></i>
+      </label>
+    </div>
+    <div class="form-check layout-item">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="layout-variations" [checked]="isHiddenSidebar" (change)="changeLayout('hidden-sidebar')">
+        Hidden Sidebar
+        <i class="input-helper"></i>
+      </label>
+    </div>
+    <div class="form-check layout-item">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="layout-variations" [checked]="isOverlaySidebar" (change)="changeLayout('overlay-sidebar')">
+        Overlay Sidebar
+        <i class="input-helper"></i>
+      </label>
+    </div>
+  </div>
+</div>
+<div id="right-sidebar" class="settings-panel">
+  <i class="settings-close mdi mdi-close" (click)="closeSettingsSidebar('main')"></i>
+  <div class="border-top right-sidebar-tab">
+    <ngb-tabset>
+      <ngb-tab title="TO DO LIST">
+        <ng-template ngbTabContent>
+          <div class="tab-pane fade show active scroll-wrapper" id="todo-section" role="tabpanel" aria-labelledby="todo-section">
+            <div class="px-3">
+              <app-todo></app-todo>
+            </div>  
+            <h4 class="px-3 text-muted mt-5 font-weight-light mb-0">Events</h4>
+            <div class="events pt-4 px-3">
+              <div class="wrapper d-flex mb-2">
+                <i class="mdi mdi-checkbox-blank-circle-outline text-primary mr-2"></i>
+                <span>Feb 11 2018</span>
+              </div>
+              <p class="mb-0 font-weight-thin text-gray">Creating component page build a js</p>
+              <p class="text-gray mb-0">The total number of sessions</p>
+            </div>
+            <div class="events pt-4 px-3">
+              <div class="wrapper d-flex mb-2">
+                <i class="mdi mdi-checkbox-blank-circle-outline text-primary mr-2"></i>
+                <span>Feb 7 2018</span>
+              </div>
+              <p class="mb-0 font-weight-thin text-gray">Meeting with Alisa</p>
+              <p class="text-gray mb-0 ">Call Sarah Graves</p>
+            </div>
+          </div>
+        </ng-template>  
+      </ngb-tab>
+        <!-- To do section tab ends -->
+      <ngb-tab title="CHATS">
+        <ng-template ngbTabContent>
+          <div class="tab-pane" id="chats-section" role="tabpanel" aria-labelledby="chats-section">
+            <div class="d-flex align-items-center justify-content-between border-bottom">
+              <p class="settings-heading border-top-0 mb-3 pl-3 pt-0 border-bottom-0 pb-0">Friends</p>
+              <small class="settings-heading border-top-0 mb-3 pt-0 border-bottom-0 pb-0 pr-3 font-weight-normal">See All</small>
+            </div>
+            <ul class="chat-list">
+              <li class="list active">
+                <div class="profile"><img src="assets/images/faces/face1.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Thomas Douglas</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">19 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="assets/images/faces/face2.jpg" alt="image"><span class="offline"></span></div>
+                <div class="info">
+                  <div class="wrapper d-flex">
+                    <p>Catherine</p>
+                  </div>
+                  <p>Away</p>
+                </div>
+                <div class="badge badge-success badge-pill my-auto mx-2">4</div>
+                <small class="text-muted my-auto">23 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="assets/images/faces/face3.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Daniel Russell</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">14 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="assets/images/faces/face4.jpg" alt="image"><span class="offline"></span></div>
+                <div class="info">
+                  <p>James Richardson</p>
+                  <p>Away</p>
+                </div>
+                <small class="text-muted my-auto">2 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="assets/images/faces/face5.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Madeline Kennedy</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">5 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="assets/images/faces/face6.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Sarah Graves</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">47 min</small>
+              </li>
+            </ul>
+          </div>
+        </ng-template>
+      </ngb-tab>
+        <!-- Chats section tab ends -->
+    </ngb-tabset>
+  </div>
+</div>
+                  </textarea>
+                  <h4 class="pt-4" id="leftSidebar">Left Sidebar</h4>
+                  <textarea rows="4" cols="50" class="code-non-editable">
+    <nav class="sidebar sidebar-offcanvas" id="sidebar">
+      <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
+        <a class="sidebar-brand brand-logo" href="index.html"><img src="assets/images/logo.svg" alt="logo" /></a>
+        <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
+      </div>
+      <ul class="nav">
+        <li class="nav-item profile" >
+          <div class="profile-desc">
+            <div class="profile-pic">
+              <div class="count-indicator">
+                <img class="img-xs rounded-circle " src="assets/images/faces/face15.jpg" alt="">
+                <span class="count bg-success"></span>
+              </div>
+              <div class="profile-name">
+                <h5 class="mb-0 font-weight-normal" translate>Henry Klein</h5>
+                <span translate>Gold Member</span>
+              </div>
+            </div>
+            <div class="dropdown" ngbDropdown placement="bottom-right">
+              <a class="profile-dropdown" id="profile-dropdown"><i class="mdi mdi-dots-vertical" ngbDropdownToggle></i></a>
+              <div class="dropdown-menu dropdown-menu-right sidebar-dropdown preview-list" ngbDropdownMenu aria-labelledby="profile-dropdown">
+                <a href="#" class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-dark rounded-circle">
+                      <i class="mdi mdi-settings text-primary"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content">
+                    <p class="preview-subject ellipsis mb-1 text-small" translate>Account settings</p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a href="#" class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-dark rounded-circle">
+                      <i class="mdi mdi-onepassword  text-info"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content">
+                    <p class="preview-subject ellipsis mb-1 text-small" translate>Change Password</p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a href="#" class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-dark rounded-circle">
+                      <i class="mdi mdi-calendar-today text-success"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content">
+                    <p class="preview-subject ellipsis mb-1 text-small" translate>To-do list</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item nav-category">
+          <span class="nav-link" translate>Navigation</span>
+        </li>
+        <li class="nav-item menu-items" [ngClass]="{ 'active': dashboard.isActive }">
+          <a class="nav-link" routerLink="/dashboard" routerLinkActive #dashboard="routerLinkActive">
+            <span class="menu-icon">
+              <i class="mdi mdi-speedometer"></i> 
+            </span>
+            <span class="menu-title" translate>Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-item menu-items" [ngClass]="{'active' : buttons.isActive || dropdowns.isActive || typography.isActive }">
+          <a class="nav-link" (click)="uiBasicCollapsed = !uiBasicCollapsed" [attr.aria-expanded]="uiBasicCollapsed" aria-controls="ui-basic">
+            <span class="menu-icon">
+              <i class="mdi mdi-laptop"></i>
+            </span>
+            <span class="menu-title" translate>Basic UI Elements</span>
+            <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="ui-basic" [ngbCollapse]="!uiBasicCollapsed">
+            <ul class="nav flex-column sub-menu">
+              <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/buttons" routerLinkActive="active" #buttons="routerLinkActive" translate>Buttons</a></li>
+              <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/dropdowns" routerLinkActive="active" #dropdowns="routerLinkActive" translate>Dropdowns</a></li>
+              <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/typography" routerLinkActive="active" #typography="routerLinkActive" translate>Typography</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item menu-items" [ngClass]="{ 'active' : basicElements.isActive }">
+          <a class="nav-link" (click)="formsCollapsed = !formsCollapsed" [attr.aria-expanded]="formsCollapsed" aria-controls="form-elements">
+            <span class="menu-icon">
+              <i class="mdi mdi-playlist-play"></i>
+            </span>
+            <span class="menu-title" translate>Form Elements</span>
+            <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="form-elements" [ngbCollapse]="!formsCollapsed">
+            <ul class="nav flex-column sub-menu">
+              <li class="nav-item"><a class="nav-link" routerLink="forms/basic-elements" routerLinkActive="active" #basicElements="routerLinkActive" translate>Basic Elements</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item menu-items" [ngClass]="{ 'active' : chartjs.isActive }">
+          <a class="nav-link" (click)="chartsCollapsed = !chartsCollapsed" [attr.aria-expanded]="chartsCollapsed" aria-controls="charts">
+            <span class="menu-icon">
+              <i class="mdi mdi-chart-bar"></i>
+            </span>
+            <span class="menu-title" translate>Charts</span>
+            <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="charts" [ngbCollapse]="!chartsCollapsed">
+            <ul class="nav flex-column sub-menu">
+              <li class="nav-item"> <a class="nav-link" routerLink="charts/chartjs" routerLinkActive="active" #chartjs="routerLinkActive" translate>ChartJs</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item menu-items" [ngClass]=" { 'active' : mdi.isActive }">
+          <a class="nav-link" (click)="iconsCollapsed = !iconsCollapsed"  [attr.aria-expanded]="iconsCollapsed" aria-controls="icons">
+            <span class="menu-icon">
+              <i class="mdi mdi-contacts"></i>
+            </span>
+            <span class="menu-title" translate>Icons</span>
+            <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="icons" [ngbCollapse]="!iconsCollapsed">
+            <ul class="nav flex-column sub-menu">
+              <li class="nav-item"> <a class="nav-link" routerLink="icons/mdi" routerLinkActive="active" #mdi="routerLinkActive" translate>Material</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item nav-category">
+          <span class="nav-link" translate>More</span>
+        </li>
+        <li class="nav-item menu-items" [ngClass]="{ 'active' : login.isActive || register.isActive }">
+          <a class="nav-link" (click)="userPagesCollapsed = !userPagesCollapsed"  [attr.aria-expanded]="userPagesCollapsed" aria-controls="auth">
+            <span class="menu-icon">
+              <i class="mdi mdi-security"></i>
+            </span>
+            <span class="menu-title" translate>User Pages</span>
+            <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="auth" [ngbCollapse]="!userPagesCollapsed">
+            <ul class="nav flex-column sub-menu">
+              <li class="nav-item"> <a class="nav-link" routerLink="user-pages/login" routerLinkActive="active" #login="routerLinkActive" translate> Login </a></li>
+              <li class="nav-item"> <a class="nav-link" routerLink="user-pages/register" routerLinkActive="active" #register="routerLinkActive" translate> Register </a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item menu-items">
+          <a class="nav-link" href="http://bootstrapdash.com/demo/corona-angular-free/documentation/documentation.html" target="_blank">
+            <span class="menu-icon">
+              <i class="mdi mdi-file-document-box"></i>
+            </span>
+            <span class="menu-title" translate>Documentation</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+          </textarea>
+                  <h4 class="pt-4" id="footer">Footer</h4>
+                  <textarea rows="4" cols="50" class="code-non-editable">
+    <footer class="footer">
+      <div class="d-sm-flex justify-content-center justify-content-sm-between py-2">
+        <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © <a href="https://www.bootstrapdash.com/" target="_blank"> bootstrapdash.com</a> 2020 </span>
+        <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Free <a href="https://www.bootstrapdash.com/angular-admin-templates/" target="_blank">  angular admin template </a> from bootstrapdash.com</span>
+      </div>
+    </footer>
+                  </textarea>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h3 id="customerSupport" class="mb-4">Customer Support</h3>
+                  <p>We will assist you any problem you encounter while buidling your dashboard via Corona Angular Admin.</p>
+                  <p>Email: <a href="mailto:support@urbanui.com">support@urbanui.com</a> </p>
+                  <p>We will respond to you as quickly as we can. Thank you.</p>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.45.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.45.0/mode/python/python.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

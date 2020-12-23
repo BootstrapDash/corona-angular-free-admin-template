@@ -1,0 +1,192 @@
+<nav class="navbar default-layout-navbar p-0 fixed-top d-flex flex-row">
+  <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
+    <a class="navbar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
+  </div>
+  <div class="navbar-menu-wrapper d-flex align-items-stretch">
+    <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize" (click)="toggleSidebar()">
+      <span class="mdi mdi-menu"></span>
+    </button>
+    <ul class="navbar-nav w-100">
+      <li class="nav-item w-100">
+        <form class="nav-link mt-2 mt-md-0 d-none d-lg-flex search">
+          <input type="text" class="form-control" placeholder="{{'Search products' | translate }}">
+        </form>
+      </li>
+    </ul>
+    <ul class="navbar-nav navbar-nav-right">
+      <li class="nav-item d-none d-lg-block" ngbDropdown>
+        <a class="nav-link btn btn-success create-new-button" id="createbuttonDropdown" ngbDropdownToggle translate>+ Create New Project</a>
+        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" ngbDropdownMenu aria-labelledby="createbuttonDropdown">
+          <h6 class="p-3 mb-0" translate>Projects</h6>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item preview-item">
+            <div class="preview-thumbnail">
+              <div class="preview-icon bg-dark rounded-circle">
+                <i class="mdi mdi-file-outline text-primary"></i>
+              </div>
+            </div>
+            <div class="preview-item-content">
+              <p class="preview-subject ellipsis mb-1" translate>Software Development</p>
+            </div>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item preview-item">
+            <div class="preview-thumbnail">
+              <div class="preview-icon bg-dark rounded-circle">
+                <i class="mdi mdi-web text-info"></i>
+              </div>
+            </div>
+            <div class="preview-item-content">
+              <p class="preview-subject ellipsis mb-1" translate>UI Development</p>
+            </div>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item preview-item">
+            <div class="preview-thumbnail">
+              <div class="preview-icon bg-dark rounded-circle">
+                <i class="mdi mdi-layers text-danger"></i>
+              </div>
+            </div>
+            <div class="preview-item-content">
+              <p class="preview-subject ellipsis mb-1" translate>Software Testing</p>
+            </div>
+          </a>
+          <div class="dropdown-divider"></div>
+          <p class="p-3 mb-0 text-center" translate>See all projects</p>
+        </div>
+      </li>
+      <li class="nav-item nav-settings d-none d-lg-block">
+        <a class="nav-link">
+          <i class="mdi mdi-view-grid"></i>
+        </a>
+      </li>
+      <li class="nav-item border-left" ngbDropdown>
+        <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" ngbDropdownToggle>
+          <i class="mdi mdi-email"></i>
+          <span class="count-symbol bg-success"></span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" ngbDropdownMenu aria-labelledby="messageDropdown">
+          <h6 class="p-3 mb-0" translate>Messages</h6>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item preview-item">
+            <div class="preview-thumbnail">
+              <img src="assets/images/faces/face4.jpg" alt="image" class="rounded-circle profile-pic">
+            </div>
+            <div class="preview-item-content">
+              <p class="preview-subject ellipsis mb-1" translate>Mark send you a message</p>
+              <p class="text-muted mb-0" translate>1 Minutes ago</p>
+            </div>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item preview-item">
+            <div class="preview-thumbnail">
+              <img src="assets/images/faces/face2.jpg" alt="image" class="rounded-circle profile-pic">
+            </div>
+            <div class="preview-item-content">
+              <p class="preview-subject ellipsis mb-1" translate>Cregh send you a message</p>
+              <p class="text-muted mb-0" translate>15 Minutes ago</p>
+            </div>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item preview-item">
+            <div class="preview-thumbnail">
+              <img src="assets/images/faces/face3.jpg" alt="image" class="rounded-circle profile-pic">
+            </div>
+            <div class="preview-item-content">
+              <p class="preview-subject ellipsis mb-1" translate>Profile picture updated</p>
+              <p class="text-muted mb-0" translate>18 Minutes ago</p>
+            </div>
+          </a>
+          <div class="dropdown-divider"></div>
+          <p class="p-3 mb-0 text-center" translate>4 new messages</p>
+        </div>
+      </li>
+      <li class="nav-item border-left" ngbDropdown>
+        <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" ngbDropdownToggle>
+          <i class="mdi mdi-bell"></i>
+          <span class="count-symbol bg-danger"></span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" ngbDropdownMenu aria-labelledby="notificationDropdown">
+            <h6 class="p-3 mb-0" translate>Notifications</h6>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item preview-item">
+              <div class="preview-thumbnail">
+                <div class="preview-icon bg-dark rounded-circle">
+                  <i class="mdi mdi-calendar text-success"></i>
+                </div>
+              </div>
+              <div class="preview-item-content">
+                <p class="preview-subject mb-1" translate>Event today</p>
+                <p class="text-muted ellipsis mb-0" translate>Just a reminder that you have an event today</p>
+              </div>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item preview-item">
+              <div class="preview-thumbnail">
+                <div class="preview-icon bg-dark rounded-circle">
+                  <i class="mdi mdi-settings text-danger"></i>
+                </div>
+              </div>
+              <div class="preview-item-content">
+                <p class="preview-subject mb-1" translate>Settings</p>
+                <p class="text-muted ellipsis mb-0" translate>Update dashboard</p>
+              </div>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item preview-item">
+              <div class="preview-thumbnail">
+                <div class="preview-icon bg-dark rounded-circle">
+                  <i class="mdi mdi-link-variant text-warning"></i>
+                </div>
+              </div>
+              <div class="preview-item-content">
+                <p class="preview-subject mb-1" translate>Launch Admin</p>
+                <p class="text-muted ellipsis mb-0" translate>New admin wow!</p>
+              </div>
+            </a>
+            <div class="dropdown-divider"></div>
+            <p class="p-3 mb-0 text-center" translate>See all notifications</p>
+        </div>
+      </li>
+      <li class="nav-item" ngbDropdown>
+        <a class="nav-link" id="profileDropdown" ngbDropdownToggle>
+          <div class="navbar-profile">
+            <img class="img-xs rounded-circle" src="assets/images/faces/face15.jpg" alt="">
+            <p class="mb-0 d-none d-sm-block navbar-profile-name" translate>Henry Klein</p>
+            <i class="mdi mdi-menu-down d-none d-sm-block"></i>
+          </div>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" ngbDropdownMenu aria-labelledby="profileDropdown">
+          <h6 class="p-3 mb-0" translate>Profile</h6>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item preview-item">
+            <div class="preview-thumbnail">
+              <div class="preview-icon bg-dark rounded-circle">
+                <i class="mdi mdi-settings text-success"></i>
+              </div>
+            </div>
+            <div class="preview-item-content">
+              <p class="preview-subject mb-1" translate>Settings</p>
+            </div>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item preview-item">
+            <div class="preview-thumbnail">
+              <div class="preview-icon bg-dark rounded-circle">
+                <i class="mdi mdi-logout text-danger"></i>
+              </div>
+            </div>
+            <div class="preview-item-content">
+              <p class="preview-subject mb-1" translate>Log out</p>
+            </div>
+          </a>
+          <div class="dropdown-divider"></div>
+          <p class="p-3 mb-0 text-center" translate>Advanced settings</p>
+        </div>
+      </li>
+    </ul>
+    <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" (click)="toggleOffcanvas()">
+      <span class="mdi mdi-menu"></span>
+    </button>
+  </div>
+</nav>

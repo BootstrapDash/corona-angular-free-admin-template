@@ -1,0 +1,154 @@
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+  <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
+    <a class="sidebar-brand brand-logo" href="index.html"><img src="assets/images/logo.svg" alt="logo" /></a>
+    <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
+  </div>
+  <ul class="nav">
+    <li class="nav-item profile" >
+      <div class="profile-desc">
+        <div class="profile-pic">
+          <div class="count-indicator">
+            <img class="img-xs rounded-circle " src="assets/images/faces/face15.jpg" alt="">
+            <span class="count bg-success"></span>
+          </div>
+          <div class="profile-name">
+            <h5 class="mb-0 font-weight-normal" translate>Henry Klein</h5>
+            <span translate>Gold Member</span>
+          </div>
+        </div>
+        <div class="dropdown" ngbDropdown placement="bottom-right">
+          <a class="profile-dropdown" id="profile-dropdown"><i class="mdi mdi-dots-vertical" ngbDropdownToggle></i></a>
+          <div class="dropdown-menu dropdown-menu-right sidebar-dropdown preview-list" ngbDropdownMenu aria-labelledby="profile-dropdown">
+            <a href="#" class="dropdown-item preview-item">
+              <div class="preview-thumbnail">
+                <div class="preview-icon bg-dark rounded-circle">
+                  <i class="mdi mdi-settings text-primary"></i>
+                </div>
+              </div>
+              <div class="preview-item-content">
+                <p class="preview-subject ellipsis mb-1 text-small" translate>Account settings</p>
+              </div>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item preview-item">
+              <div class="preview-thumbnail">
+                <div class="preview-icon bg-dark rounded-circle">
+                  <i class="mdi mdi-onepassword  text-info"></i>
+                </div>
+              </div>
+              <div class="preview-item-content">
+                <p class="preview-subject ellipsis mb-1 text-small" translate>Change Password</p>
+              </div>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item preview-item">
+              <div class="preview-thumbnail">
+                <div class="preview-icon bg-dark rounded-circle">
+                  <i class="mdi mdi-calendar-today text-success"></i>
+                </div>
+              </div>
+              <div class="preview-item-content">
+                <p class="preview-subject ellipsis mb-1 text-small" translate>To-do list</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="nav-item nav-category">
+      <span class="nav-link" translate>Navigation</span>
+    </li>
+    <li class="nav-item menu-items" [ngClass]="{ 'active': dashboard.isActive }">
+      <a class="nav-link" routerLink="/dashboard" routerLinkActive #dashboard="routerLinkActive">
+        <span class="menu-icon">
+          <i class="mdi mdi-speedometer"></i> 
+        </span>
+        <span class="menu-title" translate>Dashboard</span>
+      </a>
+    </li>
+    <li class="nav-item menu-items" [ngClass]="{'active' : buttons.isActive || dropdowns.isActive || typography.isActive }">
+      <a class="nav-link" (click)="uiBasicCollapsed = !uiBasicCollapsed" [attr.aria-expanded]="uiBasicCollapsed" aria-controls="ui-basic">
+        <span class="menu-icon">
+          <i class="mdi mdi-laptop"></i>
+        </span>
+        <span class="menu-title" translate>Basic UI Elements</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="ui-basic" [ngbCollapse]="!uiBasicCollapsed">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/buttons" routerLinkActive="active" #buttons="routerLinkActive" translate>Buttons</a></li>
+          <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/dropdowns" routerLinkActive="active" #dropdowns="routerLinkActive" translate>Dropdowns</a></li>
+          <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/typography" routerLinkActive="active" #typography="routerLinkActive" translate>Typography</a></li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item menu-items" [ngClass]="{ 'active' : basicElements.isActive }">
+      <a class="nav-link" (click)="formsCollapsed = !formsCollapsed" [attr.aria-expanded]="formsCollapsed" aria-controls="form-elements">
+        <span class="menu-icon">
+          <i class="mdi mdi-playlist-play"></i>
+        </span>
+        <span class="menu-title" translate>Form Elements</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="form-elements" [ngbCollapse]="!formsCollapsed">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item"><a class="nav-link" routerLink="forms/basic-elements" routerLinkActive="active" #basicElements="routerLinkActive" translate>Basic Elements</a></li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item menu-items" [ngClass]="{ 'active' : chartjs.isActive }">
+      <a class="nav-link" (click)="chartsCollapsed = !chartsCollapsed" [attr.aria-expanded]="chartsCollapsed" aria-controls="charts">
+        <span class="menu-icon">
+          <i class="mdi mdi-chart-bar"></i>
+        </span>
+        <span class="menu-title" translate>Charts</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="charts" [ngbCollapse]="!chartsCollapsed">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" routerLink="charts/chartjs" routerLinkActive="active" #chartjs="routerLinkActive" translate>ChartJs</a></li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item menu-items" [ngClass]=" { 'active' : mdi.isActive }">
+      <a class="nav-link" (click)="iconsCollapsed = !iconsCollapsed"  [attr.aria-expanded]="iconsCollapsed" aria-controls="icons">
+        <span class="menu-icon">
+          <i class="mdi mdi-contacts"></i>
+        </span>
+        <span class="menu-title" translate>Icons</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="icons" [ngbCollapse]="!iconsCollapsed">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" routerLink="icons/mdi" routerLinkActive="active" #mdi="routerLinkActive" translate>Material</a></li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item nav-category">
+      <span class="nav-link" translate>More</span>
+    </li>
+    <li class="nav-item menu-items" [ngClass]="{ 'active' : login.isActive || register.isActive }">
+      <a class="nav-link" (click)="userPagesCollapsed = !userPagesCollapsed"  [attr.aria-expanded]="userPagesCollapsed" aria-controls="auth">
+        <span class="menu-icon">
+          <i class="mdi mdi-security"></i>
+        </span>
+        <span class="menu-title" translate>User Pages</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="auth" [ngbCollapse]="!userPagesCollapsed">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" routerLink="user-pages/login" routerLinkActive="active" #login="routerLinkActive" translate> Login </a></li>
+          <li class="nav-item"> <a class="nav-link" routerLink="user-pages/register" routerLinkActive="active" #register="routerLinkActive" translate> Register </a></li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item menu-items">
+      <a class="nav-link" href="http://bootstrapdash.com/demo/corona-angular-free/documentation/documentation.html" target="_blank">
+        <span class="menu-icon">
+          <i class="mdi mdi-file-document-box"></i>
+        </span>
+        <span class="menu-title" translate>Documentation</span>
+      </a>
+    </li>
+  </ul>
+</nav>

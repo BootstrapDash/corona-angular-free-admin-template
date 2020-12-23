@@ -1,0 +1,72 @@
+@import '../../styles.scss';
+
+.card {
+  &.corona-gradient-card {
+    background-image: linear-gradient(to left, #d41459, #911a6c);
+    border-radius: 6px;
+    .gradient-corona-img {
+      height: 85px;
+      @media (max-width: 576px) {
+        height: auto;
+        min-height: 50px;
+        max-height: 85px;
+      }
+    }
+    @media (max-width: 576px) {
+      .banner-text {
+       font-size: 0.75rem;
+     }
+    }
+  }
+}
+.btn {
+  &.get-started-btn {
+    font-size: 0.75rem;
+    border: 1px solid rgba(#ffffff, 0.3);
+    font-weight: $font-weight-medium;
+    padding: 0.9375rem 1.0625rem;
+    &:hover,
+    &:focus {
+      color: #212529;
+      background-color: #ffffff;
+      border-color: #ffffff;
+    }
+    @media (max-width: 576px) {
+      font-size: 0.6rem;
+      padding: 0.4375rem 0.6625rem;
+    }
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.icon-box-#{$color} {
+      width: 40px;
+      height: 37px;
+      background: rgba($value, 0.11);
+      border-radius: 7px;
+      color: $value;
+    }
+    .icon-item {
+      font-size: 20px;
+      display: flex;
+    }
+  }
+}
+
+.table {
+  th,
+  td {
+    white-space: nowrap;
+  }
+}
+
+mgl-map {
+  height: 100%;
+  width: 100%;
+}
+
+

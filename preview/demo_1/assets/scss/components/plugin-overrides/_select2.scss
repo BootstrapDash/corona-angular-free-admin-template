@@ -1,0 +1,51 @@
+.ng-select {
+  .ng-select-container {
+    background: $dark;
+    color: $body-color;
+    border: 1px solid $border-color;
+  }
+  .ng-dropdown-panel {
+    border: 1px solid $border-color;
+    .ng-dropdown-panel-items {
+      .ng-option {
+        background-color: $dark;
+        color: $body-color;
+      }
+      .ng-option {
+        &.ng-option-selected {
+          background: $dark;
+          color: $white;
+          &.ng-option-marked {
+            background: $dark;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+  &.ng-select-opened {
+    >.ng-select-container {
+      background: $dark;
+      color: $body-color;
+      border: 1px solid $border-color;
+    }
+  }
+  &.ng-select-multiple {
+    .ng-select-container {
+      .ng-value-container {
+        .ng-value {
+          background-color: $card-bg;
+          color: $white;
+        }
+      }
+    }
+  }
+  &.ng-select-disabled {
+    >.ng-select-container {
+      background-color: $content-bg;
+    }
+  }
+ }
+
+
+

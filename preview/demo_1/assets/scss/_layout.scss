@@ -1,0 +1,127 @@
+/* Layouts */
+
+
+// Sidebar Icon Only
+.sidebar-icon-only {
+  @media(min-width: 992px) {
+    .page-body-wrapper {
+      width: calc(100% - #{$sidebar-width-icon});
+    }
+  }
+}
+
+
+.sidebar-mini {
+  @media(min-width: 992px) {
+    .page-body-wrapper {
+      width: calc(100% - #{$sidebar-width-mini});
+    }
+    &.sidebar-icon-only {
+      .page-body-wrapper {
+        width: calc(100% - #{$sidebar-width-icon});
+      }
+    }
+  }
+}
+
+//Boxed layout
+.boxed-layout {
+  @media (min-width: 992px) {
+    .container-scroller {
+      background: $boxed-layout-bg;
+      padding: 0 calc((100% - #{$boxed-container-width}) / 2);
+    }
+  }
+}
+
+//Fixed sidebar
+.sidebar-fixed {
+  @media(min-width: 992px) {
+    .page-body-wrapper {
+      width: 100%;
+      .main-panel {
+        width: calc(100% - #{$sidebar-width-lg});
+        margin-left: $sidebar-width-lg;
+      }
+    }
+    &.sidebar-icon-only {
+      .page-body-wrapper {
+        .main-panel {
+          width: calc(100% - #{$sidebar-width-icon});
+          margin-left: $sidebar-width-icon;
+        }
+      }
+    }
+  }
+}
+
+//Hidden Sidebar
+.sidebar-hidden {
+  @media (min-width: 992px) {
+    .page-body-wrapper {
+      width: 100%;
+    }
+  }
+}
+
+// Absolute sidebar with overlay to content
+.sidebar-absolute {
+  @media (min-width: 992px) {
+    .page-body-wrapper {
+      width: 100%;
+      position: relative;
+    }
+    .main-panel {
+      -webkit-transition: none;
+      transition: none;
+    }
+  }
+}
+
+//RTL layout
+.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+
+.sidebar-tinted {
+  &.sidebar-icon-only {
+    .sidebar {
+      .nav {
+        &.sub-menu {
+          .nav-item {
+            .nav-link {
+              &:before {
+                background-color: white;
+              }
+            }
+          }
+        }
+      }
+    }
+  } 
+}
+
+.rtl {
+  &.sidebar-fixed {
+    @media(min-width: 992px) {
+      .page-body-wrapper {
+        .main-panel {
+          margin-left: 0;
+          margin-right: #{$sidebar-width-lg};
+        }
+      }
+    }
+    &.sidebar-icon-only {
+      @media(min-width: 992px) {
+        .page-body-wrapper {
+          .main-panel {
+            margin-left: 0;
+            margin-right: #{$sidebar-width-icon};
+          }
+        }
+      }
+    } 
+  } 
+}
